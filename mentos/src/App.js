@@ -1,4 +1,3 @@
-// App component
 import React from 'react';
 import './App.css';
 import Header from './Header';
@@ -10,44 +9,30 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Header  backButton="/" />
         <Routes>
           <Route path="/" element={
             <>
-              <Header />
-              <h1>Main page</h1>
-            </>
-          } />
-          <Route path="/scoreboard" element={
-            <>
-              <Header backButton="/" />
-              <h1>Score board</h1>
-            </>
-          } />
-          <Route path="/messages" element={
-            <>
-              <Header backButton="/" />
-              <h1>Messages</h1>
-            </>
-          } />
-          <Route path="/studysessions" element={
-            <>
-              <Header backButton="/" />
-              <h1>Study Sessions</h1>
-            </>
-          } />
-          <Route path="/teach" element={
-            <>
-              <Header backButton="/" />
+              {/* Main Swiping Screen */}
               <TinderCards />
               <SwipeButtons />
             </>
           } />
-          <Route path="/learn" element={
+          <Route path="/messages" element={
             <>
-              <Header backButton="/" />
-              <h1>Learn</h1>
+              {/* Messaging Screen Placeholder */}
+             
+              <h1>Messages</h1>
             </>
           } />
+          <Route path="/profile" element={
+            <>
+              {/* Profile Screen Placeholder */}
+             
+              <h1>Profile</h1>
+            </>
+          } />
+          {/* Further routes can be added as needed */}
         </Routes>
       </Router>
     </div>
